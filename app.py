@@ -1,13 +1,17 @@
 from flask import Flask
 from flask_restful import Resource, Api
 ##import twitter_tools as tt
+import socket
 
 app = Flask(__name__)
 api = Api(app)
 
 class Hello(Resource):
     def get(self, name):
-        return {"Hello":name}
+        ret=socket.gethostname())
+        ret_body='{"'+ret+'": name}'
+print(socket.gethostname())
+        return ret_body
 
 #class Search(Resource):
 #    def get(self, name):
