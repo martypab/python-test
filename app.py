@@ -8,9 +8,8 @@ api = Api(app)
 
 class Hello(Resource):
     def get(self, name):
-        ret=socket.gethostname())
+        ret=socket.gethostname()
         ret_body='{"'+ret+'": name}'
-print(socket.gethostname())
         return ret_body
 
 #class Search(Resource):
