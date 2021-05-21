@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask,make_response
 from flask_restful import Resource, Api
 ##import twitter_tools as tt
 import socket
@@ -10,7 +10,10 @@ class Hello(Resource):
     def get(self, name):
         ret=socket.gethostname()
         ret_body='{"'+ret+'": name}'
-        return ret_body
+         response = make_response(ret_body)
+         response.headers["Set-Cookie"] = "myfirstcookie=somecookievalue"
+    
+        return response
 
 #class Search(Resource):
 #    def get(self, name):
