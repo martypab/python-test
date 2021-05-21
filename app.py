@@ -10,8 +10,8 @@ class Hello(Resource):
     def get(self, name):
         ret=socket.gethostname()
         ret_body='{"'+ret+'": name}'
-         response = make_response(ret_body)
-         response.headers["Set-Cookie"] = "myfirstcookie=somecookievalue"
+        response = make_response(ret_body)
+        response.headers["Set-Cookie"] = "myfirstcookie=somecookievalue"
     
         return response
 
