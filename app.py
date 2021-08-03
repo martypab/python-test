@@ -12,6 +12,9 @@ class Hello(Resource):
         ret_body='{"'+ret+'": name}'
         response = make_response(ret_body)
         response.headers["Set-Cookie"] = "myfirstcookie=somecookievalue"
+        lst = []
+        for i in range(300):
+           lst.append('x')
     
         return response
 
