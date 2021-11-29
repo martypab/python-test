@@ -4,7 +4,7 @@ metadata:
   name: python-test
   namespace: lab-my-flask-app2
 spec:
-  host: python-test-lab-my-flask-app.apps.ocplab.casa
+  host: python-test-lab-my-flask-app2.apps.ocplab.casa
   port:
     targetPort: 8080-tcp
   to:
