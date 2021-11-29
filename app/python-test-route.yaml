@@ -1,0 +1,14 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: python-test
+  namespace: lab-my-flask-app2
+spec:
+  host: python-test-lab-my-flask-app.apps.ocplab.casa
+  port:
+    targetPort: 8080-tcp
+  to:
+    kind: Service
+    name: python-test
+    weight: 100
+  wildcardPolicy: None
