@@ -1,0 +1,7 @@
+namePrefix: kustomize-
+
+resources:
+- python-test-deploy.yaml
+- python-test-route.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
